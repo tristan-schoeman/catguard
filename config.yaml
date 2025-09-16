@@ -1,0 +1,25 @@
+
+camera_index: 0
+frame_width: 640
+frame_height: 480
+roi_floor_px: 180
+min_contour_area: 1200
+presence_hold_s: 2.0
+
+use_audio: true
+audio_sample_rate: 16000
+audio_block_s: 0.5
+scratch_highband_hz: 4000
+scratch_energy_ratio: 2.5
+scratch_min_blocks: 3
+
+cooldown_s: 30
+max_triggers_per_hour: 6
+deterrent: "sound"        # "sound" or "water"
+sound_file: "assets/doorbell.wav"
+
+night_only: true
+night_start: "21:00"
+night_end: "07:00"
+
+log_dir: "logs"

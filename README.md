@@ -1,18 +1,24 @@
+
 # CatGuard 🐱🔕
 
-A humane, DIY cat-scratch deterrent system that combines **computer vision**, **audio analysis**, and **control logic** to keep curious cats from shredding your door at night.
+Humane, DIY cat-scratch deterrent using **vision**, **audio**, and **controls**.  
+Runs on a Raspberry Pi or any small Linux/Windows PC.
 
-- **Detect**: Cat presence at the door via a floor-level region of interest (ROI) in the camera feed  
-- **Listen**: Scratch-like sounds using microphone spectral features  
-- **Deter**: Play a deterrent sound (doorbell) or pulse a small water sprayer  
-- **Control**: Cooldowns, night-only scheduling, and rate-limiting for safe/humane use
+## Quick start
+```bash
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# macOS/Linux:
+source .venv/bin/activate
+pip install -r requirements.txt
 
----
+# Add a sound file:
+# assets/doorbell.wav
 
-## 🚀 Quick Start
+python -m src.main
+```
+Edit `config.yaml` to tune thresholds, schedule, and deterrent mode.
 
-### Requirements
-- Python 3.10+
-- Dependencies in `requirements.txt`:
-  ```bash
-  pip install -r requirements.txt
+## Notes
+- Start with `deterrent: "sound"`; only use water as last resort.
+- Rate-limiter and night-only schedule are enabled by default.
